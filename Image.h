@@ -11,18 +11,23 @@
 class Image {
 
 public:
-    Image(istream& file){
+    Image(istream& file, string file_name){
         if (!read(file)) {cerr << "ERROR: could not read file: " << endl;}
     };
 
     bool read(istream& file);
+    string determine_file_type(istream& file);
+    string get_file_name();
+    string get_file_type();
+    void set_file_name(string name);
+    void set_file_type(string type);
 
 private:
     int width;
     int height;
     string file_type;
+    string file_name;
     Pixel row[];
-    Pixel column[];
 
 };
 

@@ -6,7 +6,14 @@
 #define IMAGE_MANIPULATOR_PGM_H
 
 
+#include "../Image.h"
+
 class PGM {
+public:
+
+private:
+    int max_value;
+
 
 };
 
